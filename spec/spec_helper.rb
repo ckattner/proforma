@@ -7,6 +7,8 @@
 # LICENSE file in the root directory of this source tree.
 #
 
+require 'yaml'
+
 require 'pry'
 
 require 'simplecov'
@@ -14,4 +16,12 @@ require 'simplecov-console'
 SimpleCov.formatter = SimpleCov::Formatter::Console
 SimpleCov.start
 
-require './lib/shrimper'
+require './lib/proforma'
+
+def yaml_read(file)
+  YAML.safe_load(File.open(file))
+end
+
+def fixture(file)
+  File.open(File.join('spec', 'fixtures', file)).read
+end

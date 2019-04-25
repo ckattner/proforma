@@ -7,4 +7,4 @@
 # LICENSE file in the root directory of this source tree.
 #
 
-require_relative 'shrimper/shrimper'
+require_relative 'types/align'

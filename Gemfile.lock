@@ -1,11 +1,13 @@
 PATH
   remote: .
   specs:
-    Shrimper (0.0.1)
+    proforma (1.0.0.pre.alpha)
+      acts_as_hashable (~> 1)
 
 GEM
   remote: https://rubygems.org/
   specs:
+    acts_as_hashable (1.0.5)
     ansi (1.5.0)
     ast (2.4.0)
     coderay (1.1.2)
@@ -91,9 +93,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  Shrimper!
   guard-rspec (~> 4.7)
-  pry
+  proforma!
+  pry (~> 0)
   rspec (~> 3.8)
   rubocop (~> 0.63.1)
   simplecov (~> 0.16.1)

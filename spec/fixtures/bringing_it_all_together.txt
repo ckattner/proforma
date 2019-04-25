@@ -1,0 +1,42 @@
+========================================
+System A
+========================================
+555 N. Michigan Ave.
+Chicago, IL 55555
+555-555-5555 ext. 5132
+========================================
+USER LIST
+----------------------------------------
+
+ID Number, First Name, Last Name
+1, Matt, Smith
+2, Katie, Rizzo
+3, Nathan, Nathanson
+
+USER DETAILS
+----------------------------------------
+
+ID Number: 1
+First Name: Matt
+Last Name: Smith
+Type, Number
+Mobile, 444-333-2222
+Home, 444-333-2222
+
+USER DETAILS
+----------------------------------------
+
+ID Number: 2
+First Name: Katie
+Last Name: Rizzo
+Type, Number
+Fax, 888-777-6666
+
+USER DETAILS
+----------------------------------------
+
+ID Number: 3
+First Name: Nathan
+Last Name: Nathanson
+Type, Number
+

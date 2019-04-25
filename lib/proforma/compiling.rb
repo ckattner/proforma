@@ -7,6 +7,6 @@
 # LICENSE file in the root directory of this source tree.
 #
 
-module Shrimper
-  VERSION = '0.0.1'
-end
+require_relative 'compiling/aggregation'
+require_relative 'compiling/compilable'
+require_relative 'compiling/counter'

@@ -1,0 +1,101 @@
+data:
+- id: 1
+  first: Will
+  last: Smith
+  username: will_smith
+  login_count: 9219
+  phone_numbers:
+  - type: cell
+    number: 555-444-3333
+  - type: fax
+    number: 333-444-2222
+- id: 2
+  first: Martin
+  last: Lawrence
+  username: mlaw10
+  login_count: 8077
+  phone_numbers:
+  - type: home
+    number: 999-888-7777
+- id: 3
+  first: Will
+  last: Ferrell
+  username: will.ferrell
+  login_count: 190890
+  phone_numbers:
+
+template:
+  split: true
+  title: User Details
+  children:
+  - type: Header
+    value: User Details
+  - type: Separator
+  - type: Text
+    value: 'The following is user details'
+  - type: Pane
+    columns:
+    - label_width: 25.0
+      lines:
+      - label: ID Number
+        value: $id
+      - label: First Name
+        value: $first
+      - label: Last Name
+        value: $last
+  - type: Spacer
+  - type: Header
+    value: Phone Numbers
+  - type: DataTable
+    property: phone_numbers
+    empty_message: No phone numbers.
+    columns:
+    - header: Type
+      body: $type
+    - header: Number
+      body: $number
+  - type: Spacer
+
+documents:
+- title: User Details
+  contents: |+
+    USER DETAILS
+    ----------------------------------------
+    The following is user details
+    ID Number: 1
+    First Name: Will
+    Last Name: Smith
+
+    PHONE NUMBERS
+    Type, Number
+    cell, 555-444-3333
+    fax, 333-444-2222
+
+  extension: '.txt'
+- title: User Details
+  contents: |+
+    USER DETAILS
+    ----------------------------------------
+    The following is user details
+    ID Number: 2
+    First Name: Martin
+    Last Name: Lawrence
+
+    PHONE NUMBERS
+    Type, Number
+    home, 999-888-7777
+
+  extension: '.txt'
+- title: User Details
+  contents: |+
+    USER DETAILS
+    ----------------------------------------
+    The following is user details
+    ID Number: 3
+    First Name: Will
+    Last Name: Ferrell
+
+    PHONE NUMBERS
+    No phone numbers.
+
+  extension: '.txt'
