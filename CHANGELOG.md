@@ -1,3 +1,7 @@
+# 1.0.1 (April 24th, 2019)
+
+* Image and aggregation property values should resolve to nil
+
 # 1.0.0 (April 24th, 2019)
 
 Publishing first release.

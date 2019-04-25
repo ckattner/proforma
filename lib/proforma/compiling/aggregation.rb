@@ -27,7 +27,7 @@ module Proforma
         records.each do |record|
           aggregators.each do |aggregator|
             property  = aggregator.property
-            value     = property.to_s.empty? ? '' : evaluator.value(record, property)
+            value     = property.to_s.empty? ? nil : evaluator.value(record, property)
             name      = aggregator.name
 
             entry(name).add(value)
