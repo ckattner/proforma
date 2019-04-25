@@ -51,9 +51,11 @@ module Proforma
       end
 
       def compile(data, evaluator)
+        resolved_image = image.to_s.empty? ? nil : evaluator.value(data, image)
+
         self.class.new(
           details: evaluator.text(data, details),
-          image: evaluator.value(data, image),
+          image: resolved_image,
           image_height: image_height,
           image_width: image_width,
           title: evaluator.text(data, title)
