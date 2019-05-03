@@ -12,29 +12,26 @@ require_relative 'modeling'
 module Proforma
   # This class serves as a singleton that can make Proforma::Modeling components.
   class ModelFactory
-    REGISTRY = {
-      'Banner': Modeling::Banner,
-      'Collection': Modeling::Collection,
-      'DataTable': Modeling::DataTable,
-      'Grouping': Modeling::Grouping,
-      'Header': Modeling::Header,
-      'Pane': Modeling::Pane,
-      'Separator': Modeling::Separator,
-      'Spacer': Modeling::Spacer,
-      'Table': Modeling::Table,
-      'Text': Modeling::Text
-    }.freeze
+    acts_as_hashable_factory
 
-    class << self
-      extend Forwardable
+    register 'Banner', Modeling::Banner
 
-      def_delegators :factory, :array, :make
+    register 'Collection', Modeling::Collection
 
-      private
+    register 'DataTable', Modeling::DataTable
 
-      def factory
-        @factory ||= TypeFactory.new(REGISTRY)
-      end
-    end
+    register 'Grouping', Modeling::Grouping
+
+    register 'Header', Modeling::Header
+
+    register 'Pane', Modeling::Pane
+
+    register 'Separator', Modeling::Separator
+
+    register 'Spacer', Modeling::Spacer
+
+    register 'Table', Modeling::Table
+
+    register 'Text', Modeling::Text
   end
 end
